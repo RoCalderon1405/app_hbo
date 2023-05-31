@@ -1,38 +1,535 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  padding-left: 28px;
+}
+
+#carouselExampleIndicators {
+  height: 662.4px;
+}
+
+.img-responsive {
+  height: 662.4px;
+  width: 100%;
+  object-fit: cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+
+.tittle-carousel {
+  color: white;
+  margin-top: 5px;
+}
+
+.img-peliculasCarousel {
+  height: 172.667px;
+  width: 172.667px;
+}
+
+.carousel-peliculas {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.tittle-pelicula-carousel {
+  -webkit-line-clamp: 2;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: StreetLCG2;
+  font-weight: 600;
+  font-style: normal;
+  /* font-size: 12px; */
+  letter-spacing: 0px;
+  line-height: 18px;
+}
+
+.container-tittle-pelicula {
+  margin-top: 12px;
+}
+
+.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  /* otros estilos aquí */
+}
+
+.navbar-toggler-icon {
+  color: #fff !important;
+}
+
+.logo-hbo {
+  display: inline-block;
+  text-align: center;
+  margin: auto !important;
+}
+
+.navbarWelcome {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.container-InSub {
+  position: absolute;
+  right: 8px;
+  top: 15px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 9px !important;
+  font-weight: bold;
+}
+
+.InSub-ingresa {
+  display: flex;
+  color: #fff;
+  padding: 8px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+#logoNavBarSub {
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.InSub-suscrib {
+  display: flex;
+  font-size: 9px !important;
+  font-weight: 700;
+  margin: 0;
+  padding: 0.55em 1.5em 0.5em;
+  background: linear-gradient(
+      345deg,
+      rgb(73, 12, 176) 0%,
+      rgb(155, 52, 239) 33%,
+      rgba(255, 255, 255, 0) 66%,
+      rgba(255, 255, 255, 0) 100%
+    )
+    99% 50% / 400% 400%;
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: all 0.5s ease 0s !important;
+  border-radius: 50rem !important;
+  align-items: center !important;
+  justify-content: center;
+}
+
+.img-coverWelcome {
+  background-image: url("https://images7.alphacoders.com/129/1299920.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-top: 57px;
+}
+
+.welcome-container {
+  max-width: 900px;
+  margin-top: 315px;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logoAhorra {
+  width: 80%;
+}
+
+#InSub-suscribAhorra {
+  margin-top: 15px;
+  font-size: 18px !important;
+}
+
+.creaCuenta {
+  display: block;
+  margin-top: 120px;
+  color: #fff;
+}
+
+.creaCuentaText {
+  display: flex;
+  justify-content: center;
+}
+
+#CreaTuCuenta {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.formUser {
+  margin-top: 40px;
+}
+
+.form-control {
+  color: #fff;
+  border: 0;
+  width: 100%;
+  background: white !important;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+.containerbtnCreateAcc {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#btnCreateAcc {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 18px !important;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 4.5);
+}
+
+#navbarSupportedContent {
+  background-color: #fff;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #ffffff23;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+}
+
+.card-img-top {
+  width: 80px;
+}
+
+.container-formLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.form-box {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2Login {
+  font-size: 2em;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1em;
   pointer-events: none;
+  transition: 0.5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.forget {
+  margin: -15px 0 15px;
+  font-size: 0.9em;
+  color: #fff;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.forget label {
+  margin-right: 3px;
+}
+
+.forget label a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.forget label a:hover {
+  text-decoration: underline;
+}
+
+.btn-logIn {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: linear-gradient(
+      345deg,
+      rgb(73, 12, 176) 0%,
+      rgb(155, 52, 239) 33%,
+      rgba(255, 255, 255, 0) 66%,
+      rgba(255, 255, 255, 0) 100%
+    )
+    99% 50% / 400% 400%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 4.5);
+}
+
+.register {
+  font-size: 0.9em;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+.navbarLogin {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* .HboLogoLogin{
+  background-color: transparent;
+} */
+
+.container-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Hace que el contenido se desplace horizontalmente */
+  scrollbar-width: none; /* Oculta las barras de desplazamiento en navegadores compatibles */
+  -ms-overflow-style: none; /* Oculta las barras de desplazamiento en Internet Explorer y Microsoft Edge */
+}
+
+.container-carousel::-webkit-scrollbar {
+  display: none; /* Oculta las barras de desplazamiento en navegadores basados en WebKit, como Chrome y Safari */
+}
+
+.elementCarousel {
+  flex: 1 0 auto;
+  margin: 0 8px;
+  width: 180px;
+  height: 220px;
+}
+
+.iconFlecha {
+  display: flex;
+  margin-top: 6px;
+  margin-left: 8px;
+  height: 80px;
+}
+
+.container-title {
+  display: flex;
+  align-items: center;
+}
+
+.tittle-carousel {
+  display: flex;
+  align-items: center;
+}
+
+.containerFlecha {
+  display: flex;
+  align-items: center;
+}
+
+.iconNavs {
+  color: #fff;
+  font-size: 30px;
+}
+
+#perfilIcon {
+  margin-right: 8px;
+}
+
+#searchIcon {
+  margin-right: 15px;
+}
+
+.dropdown-menu {
+  background-color: rgb(25, 25, 25);
+  color: rgb(70, 57, 141);
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+#menuIcon {
+  width: 83px;
+  display: flex;
+  justify-content: center;
+}
+
+#cerrarSesion {
+  border-top: 1px solid #fff;
+}
+
+#navbarSupportedContent {
+  width: 75%; /* Ajusta el valor del ancho según tus necesidades */
+}
+
+.img-cover {
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+  margin-top: 57px;
 }
 
-.App-link {
-  color: #61dafb;
+.ContainerCard-ContainerTitle {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ContainerCard-ContainerTitle__Title {
+  color: #fff;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.ContainerCard__ContainerDescription {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.ContainerCard__ContainerDescription__Description {
+  color: #fff;
+  font-size: medium;
+  font-weight: 100;
+}
+
+.ContainerBtnMovie {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.container-formLogin__CreateMovie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.form-label_CreateMovie {
+  color: #ffffff88;
+}
+
+.form-control__UptMovie {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 2px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.ContainerBtn-UptMovie {
+  display: flex;
+  justify-content: center;
+}
+
+.ContainerBtn-UptMovie__btn{
+  background: linear-gradient(
+    345deg,
+    rgb(73, 12, 176) 0%,
+    rgb(155, 52, 239) 33%,
+    rgba(255, 255, 255, 0) 66%,
+    rgba(255, 255, 255, 0) 100%
+  )
+  99% 50% / 400% 400%;
+  border: none;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-image: url("https://www.hbomax.com/static/wef/img/bg-gradient.jpg");
 }
