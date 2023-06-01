@@ -3,10 +3,10 @@ import { useLazyQuery } from "@apollo/client";
 import { GET_USER } from "../graphql/Queries";
 import { Link, useNavigate } from "react-router-dom";
 import { userState } from "../config/userState";
-import { Carousel } from "./Carousel";
-import { CarouselMiLista } from "./CarouselMiLista";
+import { Carousel } from "../components/Carousel";
+import { CarouselMiLista } from "../components/CarouselMiLista";
 import { useUserContext } from "../context/UsersContext";
-import { NavBar } from "./NavBar";
+import { NavBar } from "../components/NavBar";
 
 export const Home = () => {
   const contextUser = useUserContext();

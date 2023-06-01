@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Home } from "./components/Home";
+import { Home } from "./pages/Home";
 import "./App.css";
 import { MoviesProvider } from "./context/MoviesContext";
 import { UsersProvider } from "./context/UsersContext";
@@ -10,6 +10,7 @@ import { TodasMovies } from "./pages/TodasMovies";
 import { Login } from "./pages/Login";
 import { MovieDetail } from "./pages/MovieDetail";
 import { UpdateMovie } from "./pages/UpdateMovie";
+import { CreateMovie } from "./pages/CreateMovie";
 
 function App() {
   const client = new ApolloClient({
@@ -28,6 +29,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/subscribe" element={<Subscribe />} />
               <Route path="/all-movies" element={<TodasMovies />} />
+              <Route path="/movie/create" element={<CreateMovie />} />
               <Route path="/movie/:_id" element={<MovieDetail />} />
               <Route path="/movie/update/:_id" element={<UpdateMovie />} />
             </Routes>

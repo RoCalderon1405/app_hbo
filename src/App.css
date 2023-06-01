@@ -473,10 +473,10 @@ input:valid ~ label {
 .ContainerCard__ContainerDescription {
   margin-top: 8px;
   margin-bottom: 8px;
+  color: #fff;
 }
 
 .ContainerCard__ContainerDescription__Description {
-  color: #fff;
   font-size: medium;
   font-weight: 100;
 }
@@ -527,6 +527,21 @@ input:valid ~ label {
   99% 50% / 400% 400%;
   border: none;
 }
+
+.container-navbar__containerBack {
+  position: absolute;
+  top: 18px;
+  font-size: 35px;
+}
+
+.container-navbar__btnBack {
+  color: #ffffff9c !important;
+}
+
+.container-AllMovies{
+  margin-top: 80px;
+}
+
 
 body {
   margin: 0;

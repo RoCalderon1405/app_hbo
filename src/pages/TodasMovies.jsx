@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { useMovieContext } from "../context/MoviesContext";
 import { Link } from "react-router-dom";
+import { NavbarAllMovies } from "../components/NavbarAllMovies";
 
 export const TodasMovies = () => {
   const { searchMovies, data } = useMovieContext();
@@ -16,12 +17,13 @@ export const TodasMovies = () => {
 
   return (
     <>
-      <div className="container">
+    <NavbarAllMovies/>
+      <div className="container container-AllMovies">
         {data &&
-          data.getMovies.map(({ _id, tittle, image, description }) => (
+          data.getMovies.map(({ _id, tittle, image, description, likes, dateOfRelease }) => (
             <Link
               to={`/movie/${_id}`}
-              state={{ _id, tittle, image, description }}
+              state={{ _id, tittle, image, description, likes, dateOfRelease }}
               className="card"
               key={_id}
             >
@@ -30,8 +32,7 @@ export const TodasMovies = () => {
                   <img src={image} className="card-img-top" alt="..." />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">{tittle}</h5>
-                  <p className="card-text">{description}</p>
+                  <h5 className="card-title__AllMovies">{tittle}</h5>
                 </div>
               </div>
             </Link>

@@ -10,6 +10,30 @@ export const CREATE_USER = gql`
   }
 `;
 
+export const CREATE_MOVIE = gql`
+  mutation createMovie(
+    $tittle: String
+    $description: String
+    $likes: Int
+    $image: String
+    $dateOfRelease: String
+  ) {
+    createMovie(
+      tittle: $tittle
+      description: $description
+      likes: $likes
+      image: $image
+      dateOfRelease: $dateOfRelease
+    ) {
+      _id
+      tittle
+      description
+      image
+      likes
+      dateOfRelease
+    }
+  }
+`;
 export const UPDATE_MOVIE = gql`
   mutation updateMovie(
     $_id: ID
@@ -27,6 +51,19 @@ export const UPDATE_MOVIE = gql`
       image: $image
       dateOfRelease: $dateOfRelease
     ) {
+      _id
+      tittle
+      description
+      image
+      likes
+      dateOfRelease
+    }
+  }
+`;
+
+export const REMOVE_MOVIE = gql`
+  mutation deleteMovie($_id: ID) {
+    deleteMovie(_id: $_id) {
       _id
       tittle
       description

@@ -27,6 +27,9 @@ export const NavBar = () => {
                 <Link to="/all-movies" className="dropdown-item">Todas las películas</Link>
               </li>
               <li>
+                <Link to="/movie/create" className="dropdown-item">Agregar Película</Link>
+              </li>
+              <li>
                 <a className="dropdown-item">Series</a>
               </li>
               <li>
