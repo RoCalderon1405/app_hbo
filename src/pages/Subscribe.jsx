@@ -12,6 +12,9 @@ export const Subscribe = () => {
   //Variables globales
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isValid, setIsValid] = useState("")
+
+  console.log(isValid)
 
   //Área de mutaciones
   const [createUser] = useMutation(CREATE_USER, {});
