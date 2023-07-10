@@ -28,7 +28,7 @@ export const UpdateMovie = () => {
       setLikes(currentState.likes);
       setId(currentState._id);
     }
-  }, []);
+  }, [currentState]);
 
   const [updateMovie] = useMutation(UPDATE_MOVIE, {});
 
