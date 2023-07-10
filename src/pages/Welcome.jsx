@@ -15,7 +15,7 @@ export const Welcome = () => {
               className="logoAhorra"
             />
           <Link
-            className="btn btn-primary InSub-suscrib"
+            className="btn btn-primary InSub-suscrib pressbtn-effect"
             to="/subscribe"
             id="InSub-suscribAhorra"
           >
