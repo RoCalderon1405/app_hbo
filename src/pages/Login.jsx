@@ -3,17 +3,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { LOGIN } from "../graphql/Queries";
 import { userState } from "../config/userState";
 import { useLazyQuery } from "@apollo/client";
+import Loader from "../assets/Loader.svg";
 
 export const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isValid, setIsValid] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const setUserSession = userState((state) => state.addSession);
   const verifySession = userState((state) => state.session);
-  console.log("Get current session y login", verifySession);
-  
+  // console.log("Get current session y login", verifySession);
 
   const [login, { data, error }] = useLazyQuery(LOGIN, {
     variables: { email, password },
@@ -48,14 +49,18 @@ export const Login = () => {
                 await login().then(function (response) {
                   var data = response.data.login;
                   console.log(data);
+                  setLoading(true);
 
-                  if (data) {
-                    navigate("/home");
-                    //Setear el estado del usuario
-                    setUserSession({ isValid: true });
-                  } else {
-                    setIsValid("Invalid credentials");
-                  }
+                  setTimeout(() => {
+                    if (data) {
+                      navigate("/home");
+                      //Setear el estado del usuario
+                      setUserSession({ isValid: true });
+                    } else {
+                      setLoading(false);
+                      setIsValid("Invalid credentials");
+                    }
+                  }, 700);
                 });
               }}
             >
@@ -90,7 +95,7 @@ export const Login = () => {
                   Remember Me <Link>Forget Password</Link>
                 </label>
               </div>
-              <button type="submit" className="btn-logIn">
+              <button type="submit" className="btn-logIn pressbtn-effect">
                 Iniciar sesión
               </button>
               <div className="register">
@@ -98,9 +103,20 @@ export const Login = () => {
                   ¿No tienes cuenta? <Link to="/subscribe">Regístrate</Link>
                 </p>
                 <div className="mb-6">
-                <p className="text-sm text"></p>
-                <span style={{color: "red"}}>{isValid}</span>
-              </div>
+                  <p className="text-sm text"></p>
+                  <div className="loaderContainer">
+                    {loading ? (
+                      <img className="loader" src={Loader} alt="Loading..." />
+                    ) : (
+                      <span
+                        className="invalidCredentials"
+                        style={{ color: "red" }}
+                      >
+                        {isValid}
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
             </form>
           </div>

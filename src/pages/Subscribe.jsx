@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CREATE_USER } from "../graphql/Mutation";
 import { NavbarSubscribe } from "../components/NavbarSubscribe";
+import { userState } from "../config/userState";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 
 export const Subscribe = () => {
   const navigate = useNavigate();
-  
+  const setUserSession = userState((state) => state.addSession);
+  const verifySession = userState((state) => state.session);
 
   //Variables globales
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isValid, setIsValid] = useState("")
 
   //Área de mutaciones
   const [createUser] = useMutation(CREATE_USER, {});
+
 
   return (
     <>
@@ -34,9 +38,14 @@ export const Subscribe = () => {
 
               await createUser({
                 variables: { email, password },
+              }).then(() => {
+                setUserSession({ isValid: true})
+                navigate("/home");
+              }).catch((err) => {
+                setIsValid("Error al crear el usuario")
+                console.log(err)
               });
-
-              navigate("/home");
+              //setear el state de la sesión para poder navegar a /home
             }}
           >
             <div className="mb-3">

@@ -94,6 +94,23 @@
   justify-content: center;
   font-size: 12px;
   font-weight: lighter;
+  text-decoration: none;
+}
+
+.pressbtn-effect {
+ transition: transform 0.2s;
+}
+
+.pressbtn-effect:active {
+  transform: scale(0.9);
+}
+
+.loaderContainer{
+  height: 50px;
+}
+.loader {
+  width: 95%;
+  height: 95%;
 }
 
 #logoNavBarSub {
@@ -146,7 +163,7 @@
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 400px;
   margin: 0 auto;
 }
 

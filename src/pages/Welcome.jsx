@@ -14,7 +14,6 @@ export const Welcome = () => {
               alt=""
               className="logoAhorra"
             />
-          </div>
           <Link
             className="btn btn-primary InSub-suscrib"
             to="/subscribe"
@@ -23,6 +22,7 @@ export const Welcome = () => {
             SUSCRÍBETE AHORA
           </Link>
           <div>*aplica al plan prepago anual</div>
+          </div>
         </div>
       </div>
     </>
