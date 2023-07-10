@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { userState } from "../config/userState";
+import React, { useEffect } from "react";
 import { useMovieContext } from "../context/MoviesContext";
 import { Link } from "react-router-dom";
 
 export const CarouselMiLista = ({ titleCarousel }) => {
   const { searchMovies, data } = useMovieContext();
-  const verifySession = userState((state) => state.session);
+  // const verifySession = userState((state) => state.session);
 
   useEffect(() => {
-    if (!verifySession.isValid) {
-      return;
-    }
     searchMovies();
   }, [searchMovies]);
 

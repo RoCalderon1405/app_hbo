@@ -13,12 +13,13 @@ export const Login = () => {
   const [loading, setLoading] = useState(false);
 
   const setUserSession = userState((state) => state.addSession);
-  const verifySession = userState((state) => state.session);
   // console.log("Get current session y login", verifySession);
 
   const [login, { data, error }] = useLazyQuery(LOGIN, {
     variables: { email, password },
   });
+  console.log(data)
+  console.log(error)
 
   return (
     <>

@@ -29,30 +29,9 @@ export const NavBar = () => {
               <li>
                 <Link to="/movie/create" className="dropdown-item">Agregar Película</Link>
               </li>
-              <li>
-                <a className="dropdown-item">Series</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Peliculas</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Originales</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Recién añadidos</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Últimos días</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Próximamente</a>
-              </li>
-              <li>
-                <a className="dropdown-item">En tendencia</a>
-              </li>
               <br />
               <li>
-                <a className="dropdown-item">Géneros</a>
+                <Link className="dropdown-item">Botón que no hace nada</Link>
               </li>
             </ul>
           </div>
@@ -87,10 +66,10 @@ export const NavBar = () => {
                 </div>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item">Mis Cosas</a>
+                    <Link className="dropdown-item">Mis Cosas</Link>
                   </li>
                   <li>
-                    <a className="dropdown-item">Cambiar de perfil</a>
+                    <Link className="dropdown-item">Cambiar de perfil</Link>
                   </li>
                   <li>
                     <Link

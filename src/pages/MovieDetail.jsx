@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { GET_MOVIES } from "../graphql/Queries";
 import { REMOVE_MOVIE } from "../graphql/Mutation";
 import { NavbarMovieDetail } from "../components/NavbarMovieDetail";
