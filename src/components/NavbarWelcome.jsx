@@ -17,7 +17,7 @@ export const NavbarWelcome = () => {
           </Link>
           <div className="d-flex conatiner-InSub">
             <Link to="/Login" className="InSub-ingresa">INGRESA</Link>
-            <Link to="/subscribe" className="btn btn-primary InSub-suscrib">
+            <Link to="/subscribe" className="btn btn-primary InSub-suscrib pressbtn-effect">
               SUSCRÍBETE AHORA
             </Link>
           </div>

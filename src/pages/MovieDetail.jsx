@@ -65,13 +65,13 @@ export const MovieDetail = () => {
           <Link
             to={`/movie/update/${_id}`}
             state={{ _id, tittle, image, description, likes, dateOfRelease }}
-            className="btn btn-warning ContainerBtn__btnUpdate"
+            className="btn btn-warning ContainerBtn__btnUpdate pressbtn-effect"
           >
             Actualizar
           </Link>
           <button
             onClick={handleDelete}
-            className="btn btn-danger MovieDetail-containerBtn__btnDelete"
+            className="btn btn-danger MovieDetail-containerBtn__btnDelete pressbtn-effect"
           >
             <Link
               to="/all-movies"

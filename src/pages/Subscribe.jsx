@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CREATE_USER } from "../graphql/Mutation";
 import { NavbarSubscribe } from "../components/NavbarSubscribe";
 import { userState } from "../config/userState";
@@ -8,12 +8,10 @@ import { useNavigate } from "react-router-dom";
 export const Subscribe = () => {
   const navigate = useNavigate();
   const setUserSession = userState((state) => state.addSession);
-  const verifySession = userState((state) => state.session);
 
   //Variables globales
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isValid, setIsValid] = useState("")
 
   //Área de mutaciones
   const [createUser] = useMutation(CREATE_USER, {});
