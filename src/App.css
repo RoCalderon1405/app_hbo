@@ -198,10 +198,10 @@
 }
 
 .form-control {
-  color: #fff;
+  color: #020202;
   border: 0;
   width: 100%;
-  background: white !important;
+  background-color:white !important;
   font-family: inherit;
   font-size: 16px;
   outline: none;
